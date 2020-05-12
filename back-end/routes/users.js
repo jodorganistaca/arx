@@ -11,7 +11,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-  let user = {};
+  let user = {};//const { user } = req.body;
   if (req.body.name) user["name"] = req.body.name;
   if (req.body.phone) user["phone"] = req.body.phone;
   if (req.body.email) user["email"] = req.body.email;
@@ -39,7 +39,7 @@ router.post("/", function (req, res) {
 });
 
 router.post("/update", function (req, res) {
-  let user = {};
+  let user = {};//const { user } = req.body;
 
   if (req.body.name) user["name"] = req.body.name;
   if (req.body.phone) user["phone"] = req.body.phone;
